@@ -40,5 +40,8 @@ app.use(function(err, req, res, next){
     })
 })
 
+process.on('unhandledRejection', (err, promise) =>{
+    console.log('為捕捉到的 rejection', promise, '原因', err);
+})
 
 module.exports = app;
