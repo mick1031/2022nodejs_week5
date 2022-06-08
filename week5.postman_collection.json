@@ -1,0 +1,229 @@
+{
+	"info": {
+		"_postman_id": "e795181f-362f-4b9e-a80d-aaa57b213cc1",
+		"name": "week5",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20566821"
+	},
+	"item": [
+		{
+			"name": "取得所有 user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://powerful-chamber-99534.herokuapp.com/users",
+					"protocol": "https",
+					"host": [
+						"powerful-chamber-99534",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增單筆 user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"米可\",\r\n    \"email\": \"test3@example.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://powerful-chamber-99534.herokuapp.com/users",
+					"protocol": "https",
+					"host": [
+						"powerful-chamber-99534",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "壞的的新增 user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"米刻\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://powerful-chamber-99534.herokuapp.com/users",
+					"protocol": "https",
+					"host": [
+						"powerful-chamber-99534",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "取得所有 post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://powerful-chamber-99534.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"powerful-chamber-99534",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增單筆 post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"62a0ef624c5baa32310dc315\",\r\n    \"content\": \"我們曾經那麼快樂 現在卻不愛了 我說妳這樣太扯 妳說妳不愛台客\",\r\n    \"image\": \"https://images.unsplash.com/photo-1646991838618-7d7147658f37?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://powerful-chamber-99534.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"powerful-chamber-99534",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "修改單筆 post",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"62a0ef624c5baa32310dc315\",\r\n    \"content\": \"這段感情失敗了 但我會一直在這 我們像是天南和地北 截然不同的地位\",\r\n    \"image\": \"https://images.unsplash.com/photo-1646991838618-7d7147658f37?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://powerful-chamber-99534.herokuapp.com/posts/62a0f05e1d84fe140544300d",
+					"protocol": "https",
+					"host": [
+						"powerful-chamber-99534",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						"62a0f05e1d84fe140544300d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除單筆 post",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://powerful-chamber-99534.herokuapp.com/posts/62a0f0201d84fe1405442ffa",
+					"protocol": "https",
+					"host": [
+						"powerful-chamber-99534",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						"62a0f0201d84fe1405442ffa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除全部 post",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://powerful-chamber-99534.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"powerful-chamber-99534",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "壞掉的 post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://powerful-chamber-99534.herokuapp.com/posts/error",
+					"protocol": "https",
+					"host": [
+						"powerful-chamber-99534",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						"error"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
