@@ -1,26 +1,20 @@
 var express = require('express');
-const appError = require('../service/appError');
+const PostController = require('../controllers/PostController');
 const handleErrorAsync = require('../service/handleErrorAsync');
 var router = express.Router();
 
 /* GET users listing. */
-router.get('/', function (req, res, next) {
-  res.send('respond with a resource');
-});
+router.get('/', handleErrorAsync(PostController.get));
 
-router.post('/', handleErrorAsync(function (req, res, next) {
-  if (req.body.content == undefined) {
-    return next(appError(400, '你沒填寫 Content 資料', next));
-  }
+router.post('/', handleErrorAsync(PostController.post));
 
-  res.status(200).json({
-    status: 'success',
-  });
-}))
+router.patch('/:id', handleErrorAsync(PostController.patch));
 
-router.get('/error', handleErrorAsync(function (req, res, next) {
-  new Error('test');
-}))
+router.delete('/:id', handleErrorAsync(PostController.delete));
+
+router.delete('/', handleErrorAsync(PostController.deleteAll));
+
+router.get('/error', handleErrorAsync(PostController.error));
 
 router.options('/', function (req, res, next) {
   res.status(200).send("");

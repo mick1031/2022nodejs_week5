@@ -1,8 +1,8 @@
 const User = require("../models/UserSchema");
-
+const appError = require('../service/appError');
 
 const UserController = {
-    Get: async (req, res, next) => {
+    get: async (req, res, next) => {
         const data = await User.find();
 
         res.status(200)
@@ -11,7 +11,7 @@ const UserController = {
                 data: data,
             });
     },
-    Post: async (req, res, next) => {
+    post: async (req, res, next) => {
         const {body} = req;
 
         const model = {
